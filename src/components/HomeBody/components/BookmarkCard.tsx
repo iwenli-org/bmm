@@ -54,7 +54,7 @@ export default function BookmarkCard(props: Props) {
       <p className="line-clamp-3 text-xs text-foreground-500" role="description">
         {props.description}
       </p>
-      <div
+      {/* <div
         className="flex max-w-full grow items-end gap-2 overflow-auto scrollbar-hide"
         aria-label="相关标签"
       >
@@ -74,7 +74,7 @@ export default function BookmarkCard(props: Props) {
             </Chip>
           )
         })}
-      </div>
+      </div> */}
     </div>
   )
 }

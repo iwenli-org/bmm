@@ -28,7 +28,7 @@ enum LoadStatus {
   ERROR,
 }
 
-const DEFAULT_FAVICON_WRAPPER_SIZE = 28
+const DEFAULT_FAVICON_WRAPPER_SIZE = 36
 
 function Wrapper(props: PropsWithChildren<Pick<Props, 'size' | 'className'>>) {
   const size = props.size || DEFAULT_FAVICON_WRAPPER_SIZE

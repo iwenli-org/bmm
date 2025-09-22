@@ -41,9 +41,9 @@ export default function Banner(props: Props) {
           {pageUtil.isUserSpace ? session.data?.user.name : WEBSITE_NAME}
         </GradientText>
         <div className="text-foreground-800">收纳、分享、探索优质网站</div>
-        <div className="text-sm text-foreground-500">
+        {/* <div className="text-sm text-foreground-500">
           已收录 {totalBookmarks} 个书签，共 {tags.length} 个标签
-        </div>
+        </div> */}
       </Wrapper>
     )
   }
@@ -75,10 +75,10 @@ export default function Banner(props: Props) {
             ))}
           </div>
         )}
-        <div className="text-sm text-zinc-500 dark:text-zinc-400">
+        {/* <div className="text-sm text-zinc-500 dark:text-zinc-400">
           {props.searchedTotalBookmarks} 个相关书签
           {!isIntersected && `，${firstTag.relatedTagIds.length} 个关联标签`}
-        </div>
+        </div> */}
         {!isIntersected && !!firstTag.relatedTagIds.length && (
           <div className="space-x-2">
             {firstTag.relatedTagIds.map((id) => {
@@ -122,11 +122,11 @@ export default function Banner(props: Props) {
             {keyword?.toUpperCase()}
           </strong>
         </div>
-        <div className="text-sm text-zinc-400">
+        {/* <div className="text-sm text-zinc-400">
           {props.searchedTotalBookmarks
             ? `已获取 ${props.searchedTotalBookmarks} 个相关书签`
             : '暂无相关书签'}
-        </div>
+        </div> */}
       </Wrapper>
     )
   }

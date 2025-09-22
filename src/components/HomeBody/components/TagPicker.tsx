@@ -51,14 +51,14 @@ export default function TagPicker(props: Props) {
   return (
     <div className="flex h-full flex-col" style={props.style}>
       <div className="my-4 shrink-0 gap-1 pr-4 flex-items-center">
-        <ReInput
+        {/* <ReInput
           size="sm"
           classNames={{ inputWrapper: 'dark:bg-opacity-50' }}
           placeholder="过滤标签"
           isClearable
           value={state.filterTagInput}
           onValueChange={(v) => setState({ filterTagInput: v })}
-        />
+        /> */}
       </div>
 
       <div className="grow-0 overflow-auto">
@@ -73,7 +73,7 @@ export default function TagPicker(props: Props) {
         </ScrollShadow>
       </div>
 
-      {!state.filterTagInput && (
+      {/* {!state.filterTagInput && (
         <>
           <div className="my-4 shrink-0 flex-items-center">
             <Switch
@@ -97,7 +97,7 @@ export default function TagPicker(props: Props) {
             可多选，实现交叉筛选书签
           </div>
         </>
-      )}
+      )} */}
     </div>
   )
 }

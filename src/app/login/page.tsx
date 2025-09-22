@@ -40,7 +40,7 @@ export default function Page() {
           <Image src={Assets.LOGO_SVG} width={32} height={32} alt="logo" />
           <h3
             className={cn(
-              'translate-y-0.5 font-mono text-2xl font-light leading-none text-foreground-700',
+              'font-scan translate-y-0.5 text-2xl font-light leading-none text-foreground-700',
               state.showBg && '!text-white/90'
             )}
           >

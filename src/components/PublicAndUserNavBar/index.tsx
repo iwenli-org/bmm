@@ -5,7 +5,7 @@ import { IconButtonProps, NavBarProps } from '@/components/common'
 import { MobileTagPicker } from '@/components/MobileTagPicker'
 import { usePageUtil } from '@/hooks'
 import { getTagLinkAttrs } from '@/utils'
-import { Assets, Background, ExternalLinks, IconNames, PageRoutes, WEBSITE_NAME } from '@cfg'
+import { Assets, Background, ExternalLinks, IconNames, PageRoutes, WEBSITE_SUB_NAME } from '@cfg'
 import {
   cn,
   Link,
@@ -95,8 +95,15 @@ export function PublicAndUserNavbar(props: Props) {
       <NavbarBrand className="shrink-0 grow-0 max-xs:basis-20 xs:basis-56">
         <Link href={routes.INDEX} className="gap-4 flex-items-center">
           <Image src={Assets.LOGO_SVG} width={32} height={32} alt="logo" priority />
-          <h3 className="translate-y-0.5 font-mono text-2xl font-light text-foreground-700">
-            {isUserSpace ? user?.name : WEBSITE_NAME}
+          <h3
+            className="font-scan translate-y-0.5 text-2xl font-light text-foreground-700"
+            style={{
+              fontWeight: 500,
+              fontFamily:
+                'Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji,BlinkMacSystemFont,Helvetica Neue,Arial,PingFang SC,PingFang TC,PingFang HK,Microsoft Yahei,Microsoft JhengHei',
+            }}
+          >
+            {WEBSITE_SUB_NAME}
           </h3>
         </Link>
       </NavbarBrand>
@@ -131,15 +138,15 @@ export function PublicAndUserNavbar(props: Props) {
               <span className={group.icon} />
             </ReButton>
           ))}
-        <ReButton
+        {/* <ReButton
           {...IconButtonProps}
           className={cn(IconButtonProps.className, !totalBookmarks && 'hidden', 'max-xs:hidden')}
           href={isUserSpace ? PageRoutes.User.RANDOM : PageRoutes.Public.RANDOM}
           tooltip="随便看看"
           startContent={<span className={IconNames.SIEVE} />}
-        />
+        /> */}
         <ThemeToggle />
-        <ReButton
+        {/* <ReButton
           {...IconButtonProps}
           href={ExternalLinks.REPO}
           target="_blank"
@@ -155,8 +162,8 @@ export function PublicAndUserNavbar(props: Props) {
           }}
         >
           <span className={IconNames.GITHUB} />
-        </ReButton>
-        <NavUser />
+        </ReButton> */}
+        {/* <NavUser /> */}
       </NavbarContent>
       <NavbarMenuToggle className="xs:hidden" />
       <NavbarMenu className={cn(Background.CLASS, 'dark:bg-opacity-50')}>
